@@ -130,8 +130,21 @@ class text_web_textile(MimeTypeItem):
     mimetypes = ('text/x-web-textile',)
     extensions = ('textile',)
     binary = 0
+    
+class application_font_woff(MimeTypeItem): 
 
+     __name__   = "Web Open Font Format" 
+    mimetypes  = ('application/font-woff',) 
+    extensions = ('woff',) 
+    binary     = 1 
 
+class application_vnd_ms_fontobject(MimeTypeItem): 
+
+     __name__   = "Embedded Opentype Font" 
+    mimetypes  = ('application/vnd.ms-fontobject',) 
+    extensions = ('eot',) 
+    binary     = 1 
+    
 reg_types = [
     text_plain,
     text_pre_plain,
@@ -148,6 +161,8 @@ reg_types = [
     text_web_intelligent,
     text_web_markdown,
     text_web_textile,
+    application_font_woff, 
+ 	application_vnd_ms_fontobject, 
 ]
 
 
